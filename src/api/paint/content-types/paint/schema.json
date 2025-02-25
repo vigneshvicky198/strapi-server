@@ -1,22 +1,22 @@
 {
   "kind": "collectionType",
-  "collectionName": "carts",
+  "collectionName": "paints",
   "info": {
-    "singularName": "cart",
-    "pluralName": "carts",
-    "displayName": "cart"
+    "singularName": "paint",
+    "pluralName": "paints",
+    "displayName": "Paint"
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "image": {
+    "pic": {
       "allowedTypes": [
         "images",
         "files"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
     },
     "Name": {
       "type": "string"
