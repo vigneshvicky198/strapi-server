@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -12,9 +12,10 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.10.2",
-    "@strapi/plugin-users-permissions": "5.10.2",
-    "@strapi/strapi": "5.10.2",
+    "@strapi/plugin-cloud": "5.10.3",
+    "@strapi/plugin-users-permissions": "5.10.3",
+    "@strapi/provider-upload-cloudinary": "^5.10.3",
+    "@strapi/strapi": "5.10.3",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
@@ -23,12 +24,11 @@
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "93047e00-4568-4361-9b3c-b975bf0b7c9e"
+    "uuid": "9b42881a-ef7b-4236-bcc4-119dec2eaf6f"
   }
 }
