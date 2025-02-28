@@ -23,6 +23,12 @@
     },
     "price": {
       "type": "biginteger"
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "paints"
     }
   }
 }
