@@ -473,6 +473,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
 export interface ApiCartCart extends Struct.CollectionTypeSchema {
   collectionName: 'carts';
   info: {
+    description: '';
     displayName: 'Cart';
     pluralName: 'carts';
     singularName: 'cart';
@@ -489,9 +490,14 @@ export interface ApiCartCart extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     paints: Schema.Attribute.Relation<'oneToMany', 'api::paint.paint'>;
     publishedAt: Schema.Attribute.DateTime;
+    Quantity: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    users_permissions_user: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
   };
 }
 
@@ -562,6 +568,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiPaintPaint extends Struct.CollectionTypeSchema {
   collectionName: 'paints';
   info: {
+    description: '';
     displayName: 'Paint';
     pluralName: 'paints';
     singularName: 'paint';
@@ -578,7 +585,7 @@ export interface ApiPaintPaint extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::paint.paint'> &
       Schema.Attribute.Private;
     Name: Schema.Attribute.String;
-    pic: Schema.Attribute.Media<'images' | 'files'>;
+    pic: Schema.Attribute.Media<'images' | 'files', true>;
     price: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

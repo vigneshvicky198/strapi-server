@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cart",
     "pluralName": "carts",
-    "displayName": "Cart"
+    "displayName": "Cart",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,14 @@
       "relation": "oneToMany",
       "target": "api::paint.paint",
       "mappedBy": "cart"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Quantity": {
+      "type": "integer"
     }
   }
 }

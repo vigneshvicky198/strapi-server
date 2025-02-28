@@ -4,19 +4,21 @@
   "info": {
     "singularName": "paint",
     "pluralName": "paints",
-    "displayName": "Paint"
+    "displayName": "Paint",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "pic": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Name": {
       "type": "string"
