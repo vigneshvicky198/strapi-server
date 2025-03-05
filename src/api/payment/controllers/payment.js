@@ -1,7 +1,7 @@
 // src/api/payment/controllers/payment.js
 'use strict';
 const Razorpay = require('razorpay');
-// const {parseMultipartData, sanitizeEntity} = require('@strapi/utils');
+const {parseMultipartData, sanitizeEntity} = require('@strapi/utils');
 
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID, // Add your Razorpay key ID here
